@@ -1,0 +1,504 @@
+@import "variables";
+
+// General Styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+// Utilities
+.container {
+  max-width: $website-width;
+  padding: 0 1rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.5s;
+  border: none;
+
+  &-light {
+    background: $light-color;
+    color: $dark-color;
+  }
+
+  &:hover {
+    background: $main-color;
+  }
+
+  &-dark {
+    background: $dark-color;
+    color: $light-color;
+    padding: 0.75rem 20rem;
+  }
+}
+
+.border-line {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: $main-color;
+  margin: 0 auto 1rem auto;
+}
+
+.p-large {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.p-bold {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.h-lead {
+  font-size: 2rem;
+}
+// Home page
+// Header
+#header {
+  &-main {
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+    margin: auto;
+  }
+}
+// Navbar
+#nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    text-transform: uppercase;
+    margin-right: 3rem;
+    color: $light-color;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-bottom: 3px solid $medium-color;
+    }
+    &.current {
+      border-bottom: 3px solid $main-color;
+    }
+  }
+}
+
+.header-content {
+  padding-top: 20%;
+  text-align: center;
+
+  h1 {
+    font-size: 4rem;
+    color: $light-color;
+  }
+
+  p {
+    color: $light-color;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Sections
+#section {
+  &-a {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .specialities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      margin-top: 2.5rem;
+
+      .fas {
+        color: $main-color;
+      }
+    }
+  }
+
+  &-b {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1rem 0;
+
+      div:nth-child(even) {
+        background: $medium-color;
+        padding: 3rem 0;
+      }
+      div:nth-child(odd) {
+        background: #f5f5f5;
+        padding: 3rem 0;
+      }
+    }
+  }
+
+  &-c {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .creative {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      margin-top: 1rem;
+
+      .creative-icon {
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 50%;
+        background: $dark-color;
+        color: $light-color;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        .icon-number {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 15px;
+          width: 15px;
+          line-height: 15px;
+          border-radius: 50%;
+          padding: 1rem;
+          font-size: 2rem;
+          background: $main-color;
+          color: $light-color;
+          transition: all 1s;
+        }
+        &:hover {
+          background: $main-color;
+          height: 90px;
+          width: 90px;
+          line-height: 90px;
+
+          .icon-number {
+            background: $dark-color;
+            color: $light-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#footer-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: $dark-color;
+  color: $light-color;
+  height: auto;
+
+  .footer-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    .fab {
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      border: 2px solid $light-color;
+      border-radius: 50%;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      color: $light-color;
+      text-align: center;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+
+// About page
+// Header Inner
+#header-inner {
+  height: 6rem;
+  background: $bg-image no-repeat 20% 30% / cover;
+  margin: auto;
+  border-bottom: 3px solid $main-color;
+}
+
+#about {
+  &-a {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .bio {
+      &-content {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-areas:
+          "about-img about-text about-text"
+          "award-1 award-2 award-3";
+        grid-gap: 1rem;
+
+        .bio-img {
+          grid-area: about-img;
+        }
+        .bio-text {
+          grid-area: about-text;
+          border-left: 3px solid $main-color;
+          background: #f5f5f5;
+          padding: 1rem 0;
+        }
+        .award-1 {
+          grid-area: award-1;
+        }
+        .award-2 {
+          grid-area: award-2;
+        }
+        .award-3 {
+          grid-area: award-3;
+        }
+
+        img {
+          height: 100%;
+        }
+
+        .fas {
+          color: $main-color;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+  &-b {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    background: $dark-color;
+    color: $light-color;
+
+    .skills {
+      text-align: left;
+
+      h4 {
+        margin-bottom: 0;
+      }
+      .progress {
+        width: 100%;
+        height: 1.5rem;
+        border-radius: 5px;
+        background: $medium-color;
+        margin-bottom: 0.5rem;
+
+        & > div {
+          width: 100%;
+          height: 1.5rem;
+          border-radius: 5px;
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  &-c {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    background: #f5f5f5;
+
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 4rem;
+      padding: 2rem 0;
+    }
+  }
+
+  &-d {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      text-align: left;
+
+      .p-border {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p:nth-child(odd) {
+        margin-top: 1.5rem;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        float: left;
+      }
+    }
+  }
+}
+
+// Work Page
+#work {
+  &-a {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 1rem 0;
+
+      .item {
+        border-bottom: 3px solid $main-color;
+        transition: transform 0.5s;
+        background: #f5f5f5;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+
+        &:hover {
+          transform: scale(103%);
+        }
+
+        &-text-wrap {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}
+
+// Contact Page
+#contact {
+  &-a {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      padding: 1rem 0;
+
+      textarea {
+        grid-column: 1 / span 2;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+      }
+
+      input {
+        padding: 0.5rem;
+      }
+    }
+
+    .btn {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-b {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    background: $dark-color;
+    color: $light-color;
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &-c {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: $main-color;
+    color: $light-color;
+    padding: 4rem 0;
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+// Import Media
+@import "media";
