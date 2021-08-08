@@ -41,28 +41,25 @@
         <h2 class="h-lead">Contact Me</h2>
         <div class="border-line"></div>
         <p class="p-large">Here is how you can reach me</p>
-        <form
-          method="POST"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          class="contact-form"
-        >
-          <input type="text" placeholder="Name" name="name" />
-          <input type="email" placeholder="Email Address" name="email" />
-          <input type="text" placeholder="Subject" name="subject" />
-          <input type="phone" placeholder="Phone Number" name="phone" />
-          <textarea
-            id="textarea"
-            cols="30"
-            rows="10"
-            placeholder="Enter Message"
-            name="message"
-          ></textarea>
+        <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <div class="contact-form">
+            <input type="text" placeholder="Name" name="name" />
+            <input type="email" placeholder="Email Address" name="email" />
+            <input type="text" placeholder="Subject" name="subject" />
+            <input type="phone" placeholder="Phone Number" name="phone" />
+            <textarea
+              id="textarea"
+              cols="30"
+              rows="10"
+              placeholder="Enter Message"
+              name="message"
+            ></textarea>
+          </div>
           <div>
             <div data-netlify-recaptcha="true"></div>
           </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
         </form>
-        <button class="btn btn-dark">Submit</button>
       </div>
     </section>
 
